@@ -1,0 +1,30 @@
+.collapse,
+.collapsing {
+  border: none !important;
+}
+
+.accordion-item {
+  transition: 0.2s linear;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+
+.accordion-body a:hover {
+  color: #d30095;
+}
+
+.bor-bot {
+  border-bottom: none !important;
+}
+
+@media (min-width: 768px) {
+  .accordion-button::after {
+    display: none;
+  }
+
+  .accordion-button {
+    cursor: context-menu !important;
+  }
+}

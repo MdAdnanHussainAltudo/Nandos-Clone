@@ -1,0 +1,46 @@
+.cover-text > * {
+  filter: drop-shadow(0 0 1rem black);
+}
+
+.cover-text::before,
+.cover-text::after {
+  content: "";
+  background-color: #fff;
+  width: 9rem;
+  height: 0.4rem;
+  z-index: 4;
+  border-radius: 0.5rem;
+  justify-items: center;
+}
+
+.cover-text::before {
+  bottom: 4rem;
+  transform: rotate(-4deg);
+}
+
+.cover-text::after {
+  top: 4rem;
+  transform: rotate(4deg);
+}
+
+.cover-text-w::before,
+.cover-text-w::after {
+  display: block;
+  content: "";
+  background-color: #000;
+  width: 9rem;
+  height: 0.4rem;
+  z-index: 4;
+  border-radius: 0.5rem;
+  justify-items: center;
+}
+
+.cover-text-w::before {
+  bottom: 4rem;
+  transform: rotate(-4deg);
+}
+
+.cover-text-w::after {
+  top: 4rem;
+  transform: rotate(4deg);
+}

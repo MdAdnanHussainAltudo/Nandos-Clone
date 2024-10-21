@@ -1,0 +1,51 @@
+.cus-btn {
+  font-size: 0.9rem;
+  width: max-content;
+  min-width: 10rem;
+  padding: 0.6rem 2rem;
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.cus-btn:hover {
+  background-color: #95e8db;
+}
+
+.cus-btn::before,
+.cus-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: rotate(180deg) translateX(300%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.cus-btn::before {
+  top: 0;
+  z-index: 99;
+  border-bottom: 10px solid white;
+}
+
+.cus-btn::after {
+  top: -5px;
+  z-index: 100;
+  border-bottom: 10px solid #ff00b4;
+}
+
+.cus-btn:hover::after {
+  animation: move 0.6s infinite alternate linear; /* Animation on hover */
+}
+
+@keyframes move {
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: -10px; /* Move up by 2px */
+  }
+}

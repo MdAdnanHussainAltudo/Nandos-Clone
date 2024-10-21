@@ -1,0 +1,17 @@
+#carouselCont {
+  z-index: 0;
+  overflow: hidden;
+}
+
+#carouselCont::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 6rem;
+  background-color: #fff;
+  border-top: 0.5rem solid black;
+  left: -3rem;
+  bottom: -3rem;
+  transform: rotate(-3deg);
+  z-index: 1;
+}
