@@ -4,13 +4,13 @@ import "./AccItem.css";
 
 const AccItem = ({ accord, index }) => {
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 768);
-  const [isExpanded, setIsExpanded] = useState(isWideScreen); // Default to expanded on wide screens
+  const [isExpanded, setIsExpanded] = useState(isWideScreen);
 
   useEffect(() => {
     const handleResize = () => {
       const wideScreen = window.innerWidth >= 768;
       setIsWideScreen(wideScreen);
-      setIsExpanded(wideScreen); // Expand on wide screen and collapse on narrow screen
+      setIsExpanded(wideScreen);
     };
 
     window.addEventListener("resize", handleResize);
@@ -18,7 +18,6 @@ const AccItem = ({ accord, index }) => {
   }, []);
 
   const handleButtonClick = () => {
-    // Allow toggling only on narrow screens
     if (!isWideScreen) {
       setIsExpanded((prev) => !prev);
     }
@@ -36,10 +35,10 @@ const AccItem = ({ accord, index }) => {
             className="accordion-button bg-black px-2 md:px-0 py-2 md:!py-4"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target={isWideScreen ? "#accordnone" : `#accord${index}`} // Conditionally set the target
-            aria-expanded={isExpanded} // Update to reflect current state
-            aria-controls={isWideScreen ? "accordnone" : `accord${index}`} // Also update aria-controls
-            onClick={handleButtonClick} // Updated click handler
+            data-bs-target={isWideScreen ? "#accordnone" : `#accord${index}`}
+            aria-expanded={isExpanded}
+            aria-controls={isWideScreen ? "accordnone" : `accord${index}`}
+            onClick={handleButtonClick}
           >
             <div className="text-white md:text-center fw-semibold text-lg lg:text-xl w-full uppercase">
               {accord.title}
