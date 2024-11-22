@@ -202,6 +202,14 @@ const NavbarNav = () => {
       <li className="nav-item">
         <a className="nav-link">Careers</a>
       </li>
+      <li className="nav-item">
+        <a
+          className="nav-link"
+          href="https://mdadnanhussainaltudo.github.io/TodoListTypscript/"
+        >
+          TypeScript Todo-List
+        </a>
+      </li>
     </ul>
   );
 };
