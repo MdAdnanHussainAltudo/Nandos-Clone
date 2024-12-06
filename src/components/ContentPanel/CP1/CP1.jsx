@@ -21,7 +21,7 @@ let cardCont = [
   },
 ];
 
-const CP1 = () => {
+export default function CP1() {
   return (
     <>
       <div className="p-4">
@@ -33,6 +33,4 @@ const CP1 = () => {
       </div>
     </>
   );
-};
-
-export default CP1;
+}

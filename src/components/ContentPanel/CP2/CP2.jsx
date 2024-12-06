@@ -1,7 +1,7 @@
 import Apos from "../../Apos/Apos";
 import RewardPanel from "../RewardPanel/RewardPanel";
 
-const CP2 = () => {
+export default function CP2() {
   return (
     <div className="flex flex-col justify-center items-center mb-8">
       <h1 className="rotate-[-3deg]  cover-text-w flex justify-center flex-col items-center">
@@ -16,6 +16,4 @@ const CP2 = () => {
       <RewardPanel />
     </div>
   );
-};
-
-export default CP2;
+}
